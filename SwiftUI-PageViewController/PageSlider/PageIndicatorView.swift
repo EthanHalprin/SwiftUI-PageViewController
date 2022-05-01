@@ -18,9 +18,9 @@ struct PageIndicatorView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UIPageControl {
         let pageControl = UIPageControl()
-        pageControl.currentPageIndicatorTintColor = .black
+        pageControl.currentPageIndicatorTintColor = .blue
         pageControl.numberOfPages = 3
-        pageControl.pageIndicatorTintColor = .white
+        pageControl.pageIndicatorTintColor = .gray
         return pageControl
     }
 

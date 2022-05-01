@@ -11,7 +11,9 @@ import UIKit
 
 //
 // A SwiftUI struct for holding & filling the PageViewController with real
-// controllers.
+// controllers. Another job for this srtuct is to overlay the page indicator
+// on the PageController while supplying both the transition trigger so
+// motion would be reflected in them.
 //
 // *Remark:
 //
@@ -31,10 +33,12 @@ struct PageSliderView: View {
     //
     @StateObject var transitionTrigger = TransitionTrigger()
     
-    init(_ data: [String]) {
-        self.controllers = data.map({ UIHostingController(rootView: PageContentView(data: $0)) })
+    init(_ views: [PageContentView]) {
+        views.forEach {
+            self.controllers.append(UIHostingController(rootView: $0))
+        }
     }
-    
+
     var body: some View {
         PageViewController(controllers: controllers, transitionTrigger: transitionTrigger)
             .overlay(alignment: .bottom) {
