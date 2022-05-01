@@ -26,10 +26,13 @@ import UIKit
 //
 struct PageSliderView: View {
     
+    //
+    // The hosting controllers to be stored in PageViewController
+    //
     var controllers = [UIHostingController<PageContentView>]()
     //
-    // This state object is crucial for passing the transion data
-    // and will be sent to both PageViewController & PageIndicatorView
+    // State object for reflecting the motion. Will be passed
+    // to both PageViewController & PageIndicatorView
     //
     @StateObject var transitionTrigger = TransitionTrigger()
     
@@ -42,7 +45,7 @@ struct PageSliderView: View {
     var body: some View {
         PageViewController(controllers: controllers, transitionTrigger: transitionTrigger)
             .overlay(alignment: .bottom) {
-                PageIndicatorView(transitionTrigger: transitionTrigger)
+                PageIndicatorView(transitionTrigger: transitionTrigger, count: self.controllers.count)
             }
     }
 }

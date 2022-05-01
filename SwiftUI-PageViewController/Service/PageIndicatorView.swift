@@ -14,12 +14,13 @@ struct PageIndicatorView: UIViewRepresentable {
     
     typealias UIViewType = UIPageControl
     @ObservedObject var transitionTrigger: TransitionTrigger
+    var count: Int
 
     
     func makeUIView(context: Context) -> UIPageControl {
         let pageControl = UIPageControl()
         pageControl.currentPageIndicatorTintColor = .blue
-        pageControl.numberOfPages = 3
+        pageControl.numberOfPages = count
         pageControl.pageIndicatorTintColor = .gray
         return pageControl
     }
