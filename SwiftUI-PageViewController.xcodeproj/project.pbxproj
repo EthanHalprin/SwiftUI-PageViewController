@@ -14,7 +14,10 @@
 		AAAC71E0281EEE8A00F98A9B /* SwiftUI_PageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC71DF281EEE8A00F98A9B /* SwiftUI_PageViewControllerTests.swift */; };
 		AAAC71EA281EEE8A00F98A9B /* SwiftUI_PageViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC71E9281EEE8A00F98A9B /* SwiftUI_PageViewControllerUITests.swift */; };
 		AAAC71EC281EEE8A00F98A9B /* SwiftUI_PageViewControllerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC71EB281EEE8A00F98A9B /* SwiftUI_PageViewControllerUITestsLaunchTests.swift */; };
-		AAAC71F9281EEEA300F98A9B /* PageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC71F8281EEEA300F98A9B /* PageSliderView.swift */; };
+		AAAC71FE281EF08700F98A9B /* PageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC71FD281EF08600F98A9B /* PageSliderView.swift */; };
+		AAAC7200281EF0E700F98A9B /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC71FF281EF0E700F98A9B /* PageContentView.swift */; };
+		AAAC7202281EF12000F98A9B /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC7201281EF12000F98A9B /* PageViewController.swift */; };
+		AAAC7204281EF15700F98A9B /* PageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC7203281EF15700F98A9B /* PageIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,10 @@
 		AAAC71E5281EEE8A00F98A9B /* SwiftUI-PageViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-PageViewControllerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAAC71E9281EEE8A00F98A9B /* SwiftUI_PageViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_PageViewControllerUITests.swift; sourceTree = "<group>"; };
 		AAAC71EB281EEE8A00F98A9B /* SwiftUI_PageViewControllerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_PageViewControllerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AAAC71F8281EEEA300F98A9B /* PageSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageSliderView.swift; sourceTree = "<group>"; };
+		AAAC71FD281EF08600F98A9B /* PageSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageSliderView.swift; sourceTree = "<group>"; };
+		AAAC71FF281EF0E700F98A9B /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		AAAC7201281EF12000F98A9B /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		AAAC7203281EF15700F98A9B /* PageIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,7 @@
 			children = (
 				AAAC71CE281EEE8900F98A9B /* SwiftUI_PageViewControllerApp.swift */,
 				AAAC71D0281EEE8900F98A9B /* ContentView.swift */,
-				AAAC71F8281EEEA300F98A9B /* PageSliderView.swift */,
+				AAAC71FC281EF05F00F98A9B /* PageSlider */,
 				AAAC71D2281EEE8A00F98A9B /* Assets.xcassets */,
 				AAAC71D4281EEE8A00F98A9B /* Preview Content */,
 			);
@@ -128,6 +134,17 @@
 				AAAC71EB281EEE8A00F98A9B /* SwiftUI_PageViewControllerUITestsLaunchTests.swift */,
 			);
 			path = "SwiftUI-PageViewControllerUITests";
+			sourceTree = "<group>";
+		};
+		AAAC71FC281EF05F00F98A9B /* PageSlider */ = {
+			isa = PBXGroup;
+			children = (
+				AAAC71FD281EF08600F98A9B /* PageSliderView.swift */,
+				AAAC71FF281EF0E700F98A9B /* PageContentView.swift */,
+				AAAC7201281EF12000F98A9B /* PageViewController.swift */,
+				AAAC7203281EF15700F98A9B /* PageIndicatorView.swift */,
+			);
+			path = PageSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAAC71F9281EEEA300F98A9B /* PageSliderView.swift in Sources */,
+				AAAC71FE281EF08700F98A9B /* PageSliderView.swift in Sources */,
+				AAAC7204281EF15700F98A9B /* PageIndicatorView.swift in Sources */,
+				AAAC7202281EF12000F98A9B /* PageViewController.swift in Sources */,
 				AAAC71D1281EEE8900F98A9B /* ContentView.swift in Sources */,
 				AAAC71CF281EEE8900F98A9B /* SwiftUI_PageViewControllerApp.swift in Sources */,
+				AAAC7200281EF0E700F98A9B /* PageContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct ContentView2: View {
+struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        PageSliderView(["Page #0", "Page #1", "Page #2"])
     }
 }
 
-struct ContentView2_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView2()
+        ContentView()
     }
 }
